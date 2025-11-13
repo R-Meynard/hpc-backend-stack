@@ -1,0 +1,27 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+      
+    - name: Build Docker image
+      run: |
+        docker build -t hpc-backend:test ./cpp-dev-tools
+        
+    - name: Test Docker image
+      run: |
+        docker run --rm hpc-backend:test gcc --version
+        docker run --rm hpc-backend:test go version
+        docker run --rm hpc-backend:test python3 --version
