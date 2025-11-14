@@ -4,7 +4,7 @@
 High Performance Computing + Backend PaaS Stack with CUDA, MPI, and cloud integration.
 
 ## 🔧 Technologies
-- **Languages**: C++20/23, Go 1.24, Python 3.11, Rust 1.91
+- **Languages**: C++17/20, Go 1.24, Python 3.11, Rust 1.91
 - **HPC**: CUDA 12.1, OpenMPI, Intel oneAPI
 - **Containers**: Docker, Kubernetes
 - **Monitoring**: Prometheus, Grafana
