@@ -1,7 +1,11 @@
 #include <iostream>
 #include <string>
+#include <omp.h>
+#include <cublas_v2.h>
 
 int main(int argc, char *argv[]){
+
+   
 
     // Question 1 : Drag and drop the correct keyword to define an integer member named age in the structure.
     // Answer :
