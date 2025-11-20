@@ -18,9 +18,10 @@ int main(int argc, char *argv[]){
 
     // Question 4 : Create a pointer variable with the name ptr, that should point to a string 
     // variable named food.
-    std::string food = "Pizza";
-    std::string *ptr3 = &food;
-    std::cout << "Value of food using pointer : " << *ptr3 << std::endl;
+    std::string food = "Pizza"; // Creates a string variable named food
+    std::string *ptr3 = &food; // Creates a pointer to the string and stores the address of food
+    std::cout << "Value of food using pointer : " << *ptr3 << std::endl; 
+    // Dereferences the pointer *ptr3 to get the value of food.
 
     // Question 5 : True or False:
     // The type of a pointer must match the type of the variable it points to.
