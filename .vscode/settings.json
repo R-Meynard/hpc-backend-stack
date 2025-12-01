@@ -94,6 +94,7 @@
         "__locale": "cpp",
         "ios": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "cassert": "cpp"
     }
 }
