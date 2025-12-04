@@ -12,5 +12,6 @@ int main(int argc, char *argv[]){
     int testValue = 20;
     int* value = &testValue;
     const int* value2 = value;
+    std::cout << "Value2 : " << *value2 << std::endl;
     return 0;
 }
