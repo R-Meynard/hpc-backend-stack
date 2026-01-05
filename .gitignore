@@ -6,3 +6,8 @@
 
 # Ignorer tous les executables générés
 *.exe
+
+# ignore build directories
+build/
+**/build/
+
