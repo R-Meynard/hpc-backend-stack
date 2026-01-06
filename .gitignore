@@ -11,3 +11,5 @@
 build/
 **/build/
 
+# Ignore files of diagnostics from Valgrind
+valgrind-out.txt
