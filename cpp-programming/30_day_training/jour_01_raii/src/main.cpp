@@ -16,6 +16,21 @@ int main(){
     Buffer objBuffer1(buffer1, sizeBuffer1);
     /**========================================================================= */
     // Test the constructor by copy with both objBuffer and buffer1
-    Buffer buffer2(buffer1, sizeBuffer1);
+    Buffer buffer2(objBuffer1);
+
+    /**========================================================================= */
+    // Test the assignment operator (Rule of Three)
+    int sizeBuffer3 = 10;
+    int *buffer3 = new int[sizeBuffer3];
+    // Initialization  of the buffer1
+    for(int ii = 0; ii < sizeBuffer3; ii++){
+        buffer3[ii] = 3*ii+5*ii+4;
+    }
+    Buffer objBuffer3(buffer3, sizeBuffer3);
+    Buffer objBuffer4;
+    objBuffer4.operator=(objBuffer3);
+
+    delete[] buffer1;
+    delete[] buffer3;
     return 0;
 }
