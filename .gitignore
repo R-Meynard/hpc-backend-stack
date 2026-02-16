@@ -13,3 +13,9 @@ build/
 
 # Ignore files of diagnostics from Valgrind
 valgrind-out.txt
+
+# Rust
+target/
+Cargo.lock  # Sauf si vous créez une bibliothèque (library)
+**/*.rs.bk
+*.pdb
