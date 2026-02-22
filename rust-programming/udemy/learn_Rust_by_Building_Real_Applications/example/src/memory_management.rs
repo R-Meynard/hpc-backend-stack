@@ -10,5 +10,6 @@ pub fn stack_and_heap() {
                          // e est un pointeur stocke sur le stack
                          // Pour acceder a la valeur, on dereference avec *e
                          // println! sait afficher Box<T> si T: Display
-    println!("d = {}, e = {}", d, e)
+    println!("d = {}, e = {}", d, e);
+    drop(e); // Desallocation memoire de e
 }
