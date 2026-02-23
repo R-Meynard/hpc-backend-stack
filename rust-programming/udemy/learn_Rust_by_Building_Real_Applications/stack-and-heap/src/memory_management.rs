@@ -3,6 +3,11 @@ pub fn stack_only(b: i32) {
     println!("b = {}, c = {}", b, c)
 }
 
+pub fn stack_only_improved(b: i32) -> i32 {
+    let c = 3;
+    return b + c + stack_and_heap_improved();
+}
+
 pub fn stack_and_heap() {
     let d: i32 = 5; // stack
     let e = Box::new(7); // heap
@@ -12,6 +17,12 @@ pub fn stack_and_heap() {
                          // println! is able to display Box<T> if T: Display
     println!("d = {}, e = {}", d, e);
     drop(e); // Desallocation memoire de e
+}
+
+pub fn stack_and_heap_improved() -> i32 {
+    let d = 5;
+    let e = Box::new(7);
+    return d + *e;
 }
 
 pub fn stack_and_heap_smart_pointers() {
