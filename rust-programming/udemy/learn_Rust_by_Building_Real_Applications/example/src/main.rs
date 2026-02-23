@@ -7,4 +7,5 @@ fn main() {
     memory_management::stack_only(a);
     difference_stack_heap::f();
     memory_management::stack_and_heap();
+    memory_management::stack_and_heap_smart_pointers();
 }

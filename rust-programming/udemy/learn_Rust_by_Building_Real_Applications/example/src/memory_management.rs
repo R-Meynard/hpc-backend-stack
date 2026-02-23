@@ -6,10 +6,22 @@ pub fn stack_only(b: i32) {
 pub fn stack_and_heap() {
     let d: i32 = 5; // stack
     let e = Box::new(7); // heap
-                         // Box::new(7) alloue un i32 sur le heap
-                         // e est un pointeur stocke sur le stack
-                         // Pour acceder a la valeur, on dereference avec *e
-                         // println! sait afficher Box<T> si T: Display
+                         // Box::new(7) allocates an i32 on the heap
+                         // e is a pointer stored on the stack
+                         // To access the value, we dereference with e*
+                         // println! is able to display Box<T> if T: Display
     println!("d = {}, e = {}", d, e);
     drop(e); // Desallocation memoire de e
+}
+
+pub fn stack_and_heap_smart_pointers() {
+    let d: i32 = 5; // stack
+    let e = Box::new(7); // heap
+                         // Box is a smart pointer that stores a value on the heap
+                         // Box is a single owner, the simplest and most common
+                         // Box::new(7) allocates an i32 on the heap
+                         // e is a pointer stored on the stack
+                         // To access the value, we dereference with e*
+                         // println! is able to display Box<T> if T: Display
+    println!("d = {}, e = {}", d, e);
 }
