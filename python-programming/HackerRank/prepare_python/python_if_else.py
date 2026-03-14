@@ -3,6 +3,7 @@ import random
 import sys
 
 if __name__ == '__main__':
+    print("Give a number: ")
     n = int(input().strip())
     if(n%2 != 0):
         print("Weird")
