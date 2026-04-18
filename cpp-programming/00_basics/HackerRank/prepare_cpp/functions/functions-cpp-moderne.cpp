@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
-#include <initializer_list>
 #include <random> 
+#include <ctime>
 
 int max_of_four(int a, int b, int c, int d){
     return std::max(std::max(a, b), std::max(c, d));
